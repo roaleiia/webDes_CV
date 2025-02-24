@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+    --primary-color: #a855f7;
+    --primary-color-dark: #9333ea;
+    --secondary-color: #bf8bc7;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --extra-light: #faf5ff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Cuộn mượt khi nhấp vào liên kết neo */
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 99;
+}
+
+.nav__content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+nav .logo a:hover {
+    color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.section {
+    background-color: var(--extra-light);
+}
+
+.section__container {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.content {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitle {
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.title span {
+    font-weight: 600;
+}
+
+.description {
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.action__btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.action__btns button {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.resume_button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.resume_button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.projects_button {
+    color: var(--primary-color);
+}
+
+.projects_button:hover {
+    background-color: var(--primary-color-dark);
+    color: #ffffff;
+}
+
+.image {
+    margin-top: 100px;
+    flex-direction: column;
+    /* Xếp dọc: ảnh trên, thông tin dưới */
+    align-items: center;
+    /* Căn giữa ngang tất cả phần tử con */
+    padding: 10px;
+    /* Đồng nhất padding 4 phía */
+    background-color: lavender;
+    /* Dùng màu từ :root (#faf5ff) */
+}
+
+.img {
+    display: flex;
+    /* Đảm bảo ảnh trong .img căn giữa */
+    justify-content: center;
+    /* Căn giữa ngang ảnh */
+}
+
+.image img {
+    margin-top: 20px;
+    width: min(25rem, 65%);
+    /* Giữ chiều rộng responsive */
+    border-radius: 100%;
+    /* Ảnh tròn */
+}
+
+.contact {
+    text-align: center;
+    /* Căn giữa văn bản trong .contact */
+    margin-top: 1rem;
+    /* Khoảng cách giữa ảnh và thông tin */
+    color: var(--text-dark);
+    /* Màu chữ xám đậm từ :root (#1f2937) */
+    font-size: 1.25rem;
+    /* Cỡ chữ lớn hơn cho rõ ràng */
+}
+
+.contact hr {
+    width: 50%;
+    /* Đường kẻ ngang ngắn lại cho đẹp */
+    margin: 0.5rem auto;
+    /* Căn giữa và thêm khoảng cách */
+}
+
+.contact i {
+    font-size: 1.5rem;
+    /* Biểu tượng lớn hơn */
+    color: var(--primary-color);
+    /* Màu tím từ :root (#a855f7) */
+    margin: 0.5rem;
+    /* Khoảng cách trên biểu tượng */
+}
+
+/* Định dạng cho logo trong header */
+.logo b {
+    /* NGUYEN NGOC BAO NHI */
+    font-size: 1.5rem;
+    /* Cỡ chữ lớn hơn */
+}
+
+.logo {
+    /* WEB DEVELOPER nằm ngoài <b>, áp dụng cho toàn logo nhưng bị ghi đè bởi <b> */
+    font-size: 1rem;
+    /* Cỡ chữ nhỏ hơn cho WEB DEVELOPER */
+}
+
+/* Định dạng cho contact trong section */
+.contact span {
+    /* NGUYEN NGOC BAO NHI */
+    font-size: 1.5rem;
+    /* Cỡ chữ lớn hơn */
+}
+
+.contact {
+    /* WEB DEVELOPER nằm ngoài <span>, áp dụng cho toàn contact nhưng bị ghi đè bởi <span> */
+    font-size: 1rem;
+    /* Cỡ chữ nhỏ hơn cho WEB DEVELOPER */
+}
+
+footer {
+    background-color: #fff;
+    /* Nền trắng như trong hình */
+    padding: 1rem 0;
+    border-top: 1px solid #e5e7eb;
+    /* Đường viền trên nhẹ */
+    font-family: Arial, sans-serif;
+    /* Font mặc định cho toàn footer */
+}
+
+.footer__content {
+    max-width: var(--max-width);
+    /* Giới hạn chiều rộng */
+    margin: 0 auto;
+    /* Căn giữa */
+    padding: 0 1rem;
+    /* Khoảng cách bên */
+    display: flex;
+    /* Sắp xếp các phần */
+    justify-content: space-between;
+    /* Phân bố đều */
+    align-items: center;
+    /* Căn giữa dọc */
+    flex-wrap: wrap;
+    /* Chuyển xuống dòng trên mobile */
+}
+
+.copyright {
+    color: var(--text-light);
+    /* Màu xám nhạt */
+    font-size: 0.875rem;
+    /* Cỡ chữ nhỏ */
+}
+
+.contact__info {
+    display: flex;
+    gap: 6rem;
+    /* Khoảng cách giữa các mục */
+    align-items: center;
+}
+
+.call,
+.write,
+.follow {
+    text-align: center;
+}
+
+.call span,
+.write span,
+.follow span {
+    font-size: 0.875rem;
+    /* Cỡ chữ nhỏ cho "Call", "Write", và "Follow" */
+    color: var(--text-dark);
+    /* Màu xám đậm */
+    display: block;
+    /* Xuống dòng */
+    font-weight: bold;
+}
+
+.call p,
+.write p {
+    font-size: 1rem;
+    /* Giữ nguyên cỡ chữ */
+    color: var(--text-dark);
+    margin: 0;
+    /* Loại bỏ margin mặc định */
+    margin-top: 0.5rem;
+}
+
+.follow .social {
+    display: flex;
+    gap: 0.875rem;
+    /* Khoảng cách giữa biểu tượng */
+    justify-content: center;
+    /* Căn giữa biểu tượng */
+    margin-top: 0.5rem;
+    /* Khoảng cách giữa "Follow" và biểu tượng */
+}
+
+.social i {
+    font-size: 1.25rem;
+    /* Cỡ biểu tượng */
+    color: var(--text-dark);
+    /* Màu xám đậm */
+}
+
+.social i:hover {
+    color: var(--primary-color);
+    /* Màu tím khi hover */
+}
