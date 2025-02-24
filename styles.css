@@ -146,21 +146,23 @@ ul li a:hover {
     gap: 1rem;
 }
 
-.action__btns button {
+.action__btns a {
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 2px;
     padding: 1rem 2rem;
     outline: none;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--primary-color-dark);
     border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
     transition: 0.3s;
     cursor: pointer;
 }
 
 .resume_button {
     background-color: var(--primary-color);
-    color: #ffffff;
+    color: var(--extra-light);
 }
 
 .resume_button:hover {
@@ -168,12 +170,13 @@ ul li a:hover {
 }
 
 .projects_button {
+    background-color: var(--extra-light);
     color: var(--primary-color);
 }
 
 .projects_button:hover {
     background-color: var(--primary-color-dark);
-    color: #ffffff;
+    color: var(--extra-light);
 }
 
 .image {
